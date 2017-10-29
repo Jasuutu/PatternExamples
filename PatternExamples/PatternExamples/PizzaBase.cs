@@ -15,6 +15,12 @@
         public abstract string AddSauce();
 
         /// <summary>
+        /// Add toppings to the pizza.
+        /// </summary>
+        /// <returns>Message with the result.</returns>
+        public abstract string AddToppings();
+
+        /// <summary>
         /// Bake the pizza
         /// </summary>
         /// <returns>Message with the result.</returns>

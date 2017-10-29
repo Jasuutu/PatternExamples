@@ -14,6 +14,11 @@
             return "Adding sauce to the pepperoni pizza.";
         }
 
+        public override string AddToppings()
+        {
+            return "Adding pepperonis to the pizza.";
+        }
+
         /// <inheritdoc />
         public override string BakePizza()
         {

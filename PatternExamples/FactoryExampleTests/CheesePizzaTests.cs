@@ -8,6 +8,7 @@ namespace FactoryExampleTests
     {
         private const string CheesePizzaAddCheeseString = "Adding cheese to the cheese pizza";
         private const string CheesePizzaAddSauceString = "Adding sauce to the cheese pizza.";
+        private const string CheesePizzaAddToppingString = "Assing extra cheese to the pizza.";
         private const string CheesePizzaBakePizzaString = "Baking cheese pizza";
 
         private PizzaBase cheesePizza;
@@ -23,24 +24,26 @@ namespace FactoryExampleTests
         [Fact]
         public void AddCheeseTest()
         {
-            Assert.True(AreEqual(cheesePizza.AddCheese(), CheesePizzaAddCheeseString));
+            Assert.True(Utility.AreEqual(cheesePizza.AddCheese(), CheesePizzaAddCheeseString));
         }
 
         [Fact]
         public void AddSauceTest()
         {
-            Assert.True(AreEqual(cheesePizza.AddSauce(), CheesePizzaAddSauceString));
+            Assert.True(Utility.AreEqual(cheesePizza.AddSauce(), CheesePizzaAddSauceString));
+        }
+
+        [Fact]
+        public void AddToppingsTest()
+        {
+            Assert.True(Utility.AreEqual(cheesePizza.AddToppings(), CheesePizzaAddToppingString));
         }
 
         [Fact]
         public void BakePizzaTest()
         {
-            Assert.True(AreEqual(cheesePizza.BakePizza(), CheesePizzaBakePizzaString));
+            Assert.True(Utility.AreEqual(cheesePizza.BakePizza(), CheesePizzaBakePizzaString));
         }
 
-        private bool AreEqual(string inputString, string constantString)
-        {
-            return inputString == constantString;
-        }
     }
 }
