@@ -12,6 +12,9 @@ namespace FactoryExampleTests
 
         private PizzaBase cheesePizza;
 
+        /// <summary>
+        /// Creats the pizza object that will be used for all the tests.
+        /// </summary>
         public CheesePizzaTests()
         {
             cheesePizza = new CheesePizza();

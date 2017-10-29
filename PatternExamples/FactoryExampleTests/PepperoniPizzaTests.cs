@@ -11,6 +11,9 @@ namespace FactoryExampleTests
 
         private PizzaBase pepperoniPizza;
 
+        /// <summary>
+        /// Creats the pizza object that will be used for all the tests.
+        /// </summary>
         public PepperoniPizzaTests()
         {
             pepperoniPizza = new PepperoniPizza();
@@ -19,24 +22,19 @@ namespace FactoryExampleTests
         [Fact]
         public void AddCheeseTest()
         {
-            Assert.True(AreEqual(pepperoniPizza.AddCheese(), PepperoniPizzaAddCheeseString));
+            Assert.True(Utility.AreEqual(pepperoniPizza.AddCheese(), PepperoniPizzaAddCheeseString));
         }
 
         [Fact]
         public void AddSauceTest()
         {
-            Assert.True(AreEqual(pepperoniPizza.AddSauce(), PepperoniPizzaAddSauceString));
+            Assert.True(Utility.AreEqual(pepperoniPizza.AddSauce(), PepperoniPizzaAddSauceString));
         }
 
         [Fact]
         public void BakePizzaTest()
         {
-            Assert.True(AreEqual(pepperoniPizza.BakePizza(), PepperoniPizzaBakePizzaString));
-        }
-
-        private bool AreEqual(string inputString, string constantString)
-        {
-            return inputString == constantString;
+            Assert.True(Utility.AreEqual(pepperoniPizza.BakePizza(), PepperoniPizzaBakePizzaString));
         }
     }
 }
