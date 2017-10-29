@@ -4,6 +4,7 @@ sudo: required
 mono: none
 dotnet: 2.0.0
 script:
-    - cd PatternExamples\FactoryExampleTests
+    - cd PatternExamples
     - dotnet restore
+    - cd FactoryExampleTests
     - dotnet test
